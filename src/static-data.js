@@ -1,6 +1,6 @@
 const shortid = require('shortid'); // shortid.generate() returns a unique "short" id
-const txtgen = require('txtgen'); // txtgen.sentence() returns random "readable" sentences
-const faker = require('faker'); // faker is used for generating random fake data.
+const { sentence } = require('txtgen/dist/cjs/txtgen.js'); // txtgen.sentence() returns random "readable" sentences
+const { faker } = require('@faker-js/faker'); // faker is used for generating random fake data.
 const _ = require('lodash'); // lodash is a utility lib for Javascript
 
 const users = generateUsers(10);
@@ -32,7 +32,7 @@ export function generateUser() {
 		name: faker.name.findName(),
 		email: faker.internet.email(),
 		profile_pic: faker.internet.avatar(),
-		status: txtgen.sentence(),
+		status: sentence(),
 		user_id: shortid.generate(),
 	};
 }
@@ -42,8 +42,8 @@ export function generateUser() {
 function generateMsg(number) {
 	return {
 		number,
-		text: txtgen.sentence(),
-		is_user_msg: faker.random.boolean(),
+		text: sentence(),
+		is_user_msg: faker.datatype.boolean(),
 	};
 }
 /**
