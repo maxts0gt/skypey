@@ -1,0 +1,13 @@
+.Sidebar {
+	width: 80px;
+	background-color: rgba(92, 163, 92, 0.588);
+	height: 100%;
+	border-right: 1px solid rgba(30, 30, 210, 0.1);
+	transition: width 0.3s;
+}
+/* not small devices  */
+@media (min-width: 576px) {
+	.Sidebar {
+		width: 320px;
+	}
+}

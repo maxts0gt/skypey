@@ -1,13 +1,12 @@
 import './App.css';
+import Main from './Main';
+import Sidebar from './Sidebar';
 
 const App = () => {
 	return (
 		<div className='App'>
-			Sidebar
-			<br />
-			Main
-			{/* <Sidebar />
-			<Main /> */}
+			<Sidebar />
+			<Main />
 		</div>
 	);
 };
